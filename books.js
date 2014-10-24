@@ -25,7 +25,8 @@ var addBotton = document.getElementById("addTvShow");
 		addTheBookButton.appendChild(textForButoon);
 		
 		var enteringDiv = document.createElement("div");
-		enteringDiv.setAttribute("id", "llll");
+		enteringDiv.setAttribute("id", "enteringDiv");
+		
 		enteringDiv.appendChild(enterMovieName);
 		enteringDiv.appendChild(enterAuthorName);
 		enteringDiv.appendChild(enterRating);
@@ -40,22 +41,23 @@ function Book (bookName, authorName, score) {
 	this.authorName = authorName;
 	this.score = score;
 };
+
 function reset(){
-	
-	var erase = document.getElementById("llll");
-	erase.innerHTML = '';
+	document.getElementById("enteringDiv").remove();
+
 }
 
 function addBook(){
 	var bookName = document.getElementById('bookName').value;
 	var authorName = document.getElementById('authorName').value;
 	var score = document.getElementById('score').value;
+	
 	var lengthOfBookName = bookName.length;
 	var lengthOfAuther = authorName.length;
 	var lengthOfScore = score.length;
 	
 	if (lengthOfBookName > 0 && lengthOfAuther > 0 && lengthOfScore > 0){
-		if(score > 1 && score < 11){
+		if(score > 0 && score < 11){
 		var book = new Book(bookName, authorName, score);
 		addToList(book);
 		reset();
@@ -71,19 +73,33 @@ function addBook(){
 
 function addToList(book) {
 		var newElement = document.createElement("li");
+		newElement.id = "liList"
+		
 		var bookNameDiv = document.createElement("div");
 		bookNameDiv.innerHTML = book.bookName;
 		bookNameDiv.className = "left";
+		
 		var authorNameDiv = document.createElement("div");
 		authorNameDiv.innerHTML = book.authorName;
 		authorNameDiv.className = "center";
+		
 		var scoreDiv = document.createElement("div");
 		scoreDiv.innerHTML = book.score;
 		scoreDiv.className = "right";
+		
+		var garbege = document.createElement("button");
+		garbege.className = "garbage";
+		garbege.onclick = function whenClickOnGarbege(){
+							
+							var parentLi = garbege.parentNode;
+							parentLi.id = "parentLiOfGarbege"
+							document.getElementById("parentLiOfGarbege").remove();			
+							};
+		
 		newElement.appendChild(bookNameDiv);
 		newElement.appendChild(authorNameDiv);
 		newElement.appendChild(scoreDiv);
+		newElement.appendChild(garbege);
 		var ul = document.getElementById("bookList");
 		ul.appendChild(newElement);
 }
-
