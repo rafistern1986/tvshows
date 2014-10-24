@@ -14,24 +14,48 @@
 		.addTvShow{
 			background-color:blue;
 			font-size:40px;
-			width:40px;
-			height:40px;
+			width:53px;
+			height:53px;
+			color:white;
 			border:none;
+			text-align:center;
+			border-top-left-radius:25px;
+			border-top-right-radius:25px;
+			border-bottom-left-radius:25px;
+			border-bottom-right-radius:25px;
+			float:right;
+			margin-right:100px;
 		}
-		div{
-			display:inline-block;
-			
+		body{
+			background-color:#eee;
 		}
+		.imageForNoContent{
+			background-image:url("//ssl.gstatic.com/docs/common/h_sprite5.svg");
+			background-position-x: -50px;
+			background-position-y: -41px;
+			height:100px;
+			width:100px;
+		}
+		
 		
 		</style>
 		
 		</head>
-		<body>
-		<div id="firstDiv">
-		<div class="header">My favorite TV shows</div>
-		<button class="addTvShow" id="addTvShow"> + </button>
-		</div>
-		<ul id="bookList"></ul>
-		<script src="books.js"></script>
+		<body >
+			<div >
+				<div class="header">My favorite TV shows:</div>
+				<div id="firstDiv">
+					<button class="addTvShow" id="addTvShow"> + </button>
+				</div>
+			</div>
+			
+			<div>
+				<div></div>
+				
+				<ul id="bookList"></ul>
+			</div>
+			
+			
+			<script src="books.js"></script>
 		</body>
 	</html>
