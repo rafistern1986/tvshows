@@ -16,11 +16,27 @@ ul#bookList li  {
 	
 }
 .garbage{
-				background-image:url(https://ssl.gstatic.com/mail/sprites/general_black-16bf964ab5b51c4b7462e4429bfa7fe8.png);
-				background-position-x: 0px;
-				background-position-y: -411px;
-				height:21px;
-				width:21px;
-				float:right;
-				border:none;
-			}	
+	background-image:url(https://ssl.gstatic.com/mail/sprites/general_black-16bf964ab5b51c4b7462e4429bfa7fe8.png);
+	background-position-x: 0px;
+	background-position-y: -411px;
+	height:21px;
+	width:21px;
+	float:right;
+	border:none;
+}	
+input {
+	display:block;
+	margin-right:20px;
+	border:none;
+	background-color:#4285f4;
+	font-weight:bold;
+	color:white;
+	text-align:center;
+}
+button {
+	display:block;
+	margin-right:20px;
+	border:none;
+	
+
+}			
