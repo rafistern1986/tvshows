@@ -52,6 +52,57 @@ var y = 2;
 		}
 		
 	}
+	
+	function plusButtonInMiddelOfThePage(x,y){
+		var enteringDiv = document.getElementById("enteringDiv");
+		if(enteringDiv.innerHTML == ''){
+				
+		var enterMovieName = document.createElement("input");
+		enterMovieName.setAttribute("type", "text");
+		enterMovieName.setAttribute("placeholder", "TV show name");
+		enterMovieName.setAttribute("id", "bookName");
+		
+		var enterAuthorName = document.createElement("input");
+		enterAuthorName.setAttribute("type", "text");
+		enterAuthorName.setAttribute("placeholder", "What Season");
+		enterAuthorName.setAttribute("id", "authorName");
+		
+		var enterWhatEpisode = document.createElement("input");
+		enterWhatEpisode.setAttribute("type", "text");
+		enterWhatEpisode.setAttribute("placeholder", "What Episode");
+		enterWhatEpisode.setAttribute("id", "episode");
+		
+		var enterRating = document.createElement("input");
+		enterRating.setAttribute("type", "text");
+		enterRating.setAttribute("placeholder", "Give a score(1-10)");
+		enterRating.setAttribute("id", "score");
+		
+		var addTheBookButton = document.createElement("button");
+		addTheBookButton.setAttribute("onclick", "addBook(x)");
+		addTheBookButton.setAttribute("id", "button");
+		
+		var addTheBookButton2 = document.createElement("button");
+		addTheBookButton2.setAttribute("onclick", "addBook(y)");
+		addTheBookButton2.setAttribute("id", "button2");
+		
+		var textForButoon = document.createTextNode("Add to watch list");
+		addTheBookButton.appendChild(textForButoon);
+		var textForButoon = document.createTextNode("Add to favorites");
+		addTheBookButton2.appendChild(textForButoon);
+	
+		enteringDiv.appendChild(enterMovieName);
+		enteringDiv.appendChild(enterAuthorName);
+		enteringDiv.appendChild(enterWhatEpisode);
+		enteringDiv.appendChild(enterRating);
+		enteringDiv.appendChild(addTheBookButton);
+		enteringDiv.appendChild(addTheBookButton2);
+		
+		var topDiv = document.getElementById("firstDiv");
+		topDiv.appendChild(enteringDiv);}else{
+			reset();
+		}
+		
+	}
 
 function Book (bookName, authorName, episode, score, k) {
 	this.bookName = bookName;
@@ -90,6 +141,8 @@ function addBook(k){
 				addToList(book);
 			}
 		else{
+			score = document.getElementById('score');
+			score.style.color = "red";
 			alert("please enter a number from 1-10")
 		}
 	}else{
@@ -100,22 +153,23 @@ function addToList(book) {
 
 		
 		var newElement = document.createElement("li");
+		newElement.className = "liInList"
 		
 		var bookNameDiv = document.createElement("div");
 		bookNameDiv.innerHTML = book.bookName;
-		bookNameDiv.className = "left";
+		bookNameDiv.className = "divInlist";
 		
 		var authorNameDiv = document.createElement("div");
 		authorNameDiv.innerHTML = book.authorName;
-		authorNameDiv.className = "center";
+		authorNameDiv.className = "divInlist";
 		
 		var episodeDiv = document.createElement("div");
 		episodeDiv.innerHTML = book.episode;
-		episodeDiv.className = "center";
+		episodeDiv.className = "divInlist";
 		
 		var scoreDiv = document.createElement("div");
 		scoreDiv.innerHTML = book.score;
-		scoreDiv.className = "right";
+		scoreDiv.className = "divInlist";
 		
 		var garbege = document.createElement("button");
 		garbege.className = "garbage";
@@ -135,14 +189,19 @@ function addToList(book) {
 				deleteMe.remove();
 			}	
 			var ul = document.getElementById("bookList");
-			//ul.appendChild(newElement);
+			var category = document.getElementById("category");
+		category.style.display = "inline";
+		
 		}else{
 			var deleteMe = document.getElementById('warningEmptyFavoritesList');
 			if(deleteMe !== null){
 				deleteMe.remove();
 		}	
 			var ul = document.getElementById("bookList2");
-			//ul.appendChild(newElement);
+			var category = document.getElementById("category2");
+		category.style.display = "inline";
+			
 		}
 		ul.appendChild(newElement);
+		
 }
