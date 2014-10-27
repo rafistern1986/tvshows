@@ -1,18 +1,27 @@
-ul#bookList li div {
+.divInlist {
 	display: inline-block;
-	width: 30%;
-	text-align: center;
+	width: 23%;
+	
 }
 
 ul {
 	list-style-type: none;
-	width: 600px;
+	width: 100%;
+	padding:0px;
+	
+	
 	
 }
-
-ul#bookList li  {
-		border: 1px solid green;
-		padding: 20px;
+#bookList{
+	margin-top:5px;
+	
+}
+.liInList  {
+		border-bottom: 1px solid #4285f4;
+		padding-left: 20px;
+		padding-bottom:5px;
+		padding-top:5px;
+		
 	
 }
 .garbage{
@@ -23,20 +32,71 @@ ul#bookList li  {
 	width:21px;
 	float:right;
 	border:none;
+	background-color:#D8D8D8;
+	padding:5px;
 }	
 input {
-	display:block;
+	display:inline-block;
 	margin-right:20px;
 	border:none;
 	background-color:#4285f4;
-	font-weight:bold;
+	
 	color:white;
 	text-align:center;
+	border-top-left-radius:25px;
+	border-top-right-radius:25px;
+	border-bottom-left-radius:25px;
+	border-bottom-right-radius:25px;
+	
 }
-button {
-	display:block;
+#enteringDiv{
+	margin-top:10px;
+	margin-left:11%;
+}
+
+#button {
+	text-align:center;
+	display:inline-block;
 	margin-right:20px;
-	border:none;
+	background-color:white;
+	color:#4285f4;
+	border:#4285f4 solid 1px;
+	border-top-left-radius:25px;
+	border-top-right-radius:25px;
+	border-bottom-left-radius:25px;
+	border-bottom-right-radius:25px;
+	cursor:pointer;
+	
+	
+
+}
+#button2 {
+	display:inline-block;
+	margin-right:20px;
+	background-color:white;
+	color:#4285f4;
+	border:#4285f4 solid 1px;
+	cursor:pointer;
+	border-top-left-radius:25px;
+	border-top-right-radius:25px;
+	border-bottom-left-radius:25px;
+	border-bottom-right-radius:25px;
 	
 
 }			
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    white;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #909;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #909;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #909;
+}
