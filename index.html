@@ -17,6 +17,7 @@
 			
 		}
 		.addTvShow{
+			cursor:pointer;
 			background-color:white;
 			font-size:40px;
 			width:53px;
@@ -29,21 +30,15 @@
 			border-bottom-left-radius:25px;
 			border-bottom-right-radius:25px;
 			float:right;
-			margin-right:100px;
+			margin-right:14%;
 		}
 		body{
 			background-color:#eee;
 			margin:0px;
 		}
-		.imageForNoContent{
-			background-image:url("//ssl.gstatic.com/docs/common/h_sprite5.svg");
-			background-position-x: -50px;
-			background-position-y: -41px;
-			height:100px;
-			width:100px;
-		}
+		
 		.firstDivClass{
-			float:right;
+	
 		}
 		.listArea{
 			height:100%;
@@ -53,10 +48,10 @@
 			display:inline-block;
 		}
 		.all2InThis1{
-			width:78%;
+			width:80%;
 			height:550px;
 			margin-left:10%;
-			margin-top:20px;
+			margin-top:10px;
 		}
 		.hOne{
 			color:#4285f4;
@@ -68,22 +63,46 @@
 			font-size:25px;
 			margin-top:30%;
 		}
+		.plusButtonInTheMiddle{
+			cursor:pointer;
+			color:blue;
+			border:none;
+			background-color:white;
+			font-size:20px;
+			border-top-left-radius:25px;
+			border-top-right-radius:25px;
+			border-bottom-left-radius:25px;
+			border-bottom-right-radius:25px;
+		}
+		.margin10{
+			margin:9.3%;
+		}	
+		.span23{
+			width:22.1%;
+			display:inline-block;
+			
+			color:#4285f4;
+			
+		}
 		</style>
 		
 		</head>
 		<body >
-			<div class="header">My best TV shows<button class="addTvShow" id="addTvShow"> + </button></div>
+			<div class="header"><span class="margin10">My best TV shows</span><button class="addTvShow" id="addTvShow"> + </button></div>
 			<div class="firstDivClass" id="firstDiv"><div id="enteringDiv"></div></div>
 			
 			<div class="all2InThis1">
 				<div class="listArea">
-					<h1 class="hOne">my to watch list</h1>
-					<div id="warningEmptyWatchList" class="warningEmptyList">Your watch list is empty</br>press the <span style="color:blue;">+</span> to add a show</div>
+					<h1 class="hOne">to watch list</h1>
+					<div id="category" style="border-bottom:#4285f4 solid 1px;display:none;"><div class="span23" style="margin-left:20px;">name</div><div class="span23">season</div><div class="span23">episode</div><div class="span23">score</div></div>
+					<div id="warningEmptyWatchList" class="warningEmptyList">Your watch list is empty</br>press the <button onclick="plusButtonInMiddelOfThePage()" class="plusButtonInTheMiddle">+</button> to add a show</div>
+					
 					<ul id="bookList"></ul>
 				</div>
 				<div class="listArea">
 					<h1 class="hOne">my favorites</h1>
-					<div id="warningEmptyFavoritesList" class="warningEmptyList">Your favorites list is empty</br>press the <span style="color:blue;">+</span> to add a show</div>
+					<div id="category2" style="border-bottom:#4285f4 solid 1px;display:none;"><div class="span23" style="margin-left:20px;">name</div><div class="span23">season</div><div class="span23">episode</div><div class="span23">score</div></div>
+					<div id="warningEmptyFavoritesList" class="warningEmptyList">Your favorites list is empty</br>press the <button onclick="plusButtonInMiddelOfThePage()" class="plusButtonInTheMiddle">+</button> to add a show</div>
 					<ul id="bookList2"></ul>
 				</div>
 			</div>	
