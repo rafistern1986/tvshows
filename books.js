@@ -202,6 +202,7 @@ function addToList(book) {
 								
 								//var divChild = firstDivInLI.child.tagName;
 								
+								
 								//if(x == firstDivInLI.innerHTML){
 									var editInput = document.createElement("input");
 									editInput.setAttribute("type","text");
