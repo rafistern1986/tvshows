@@ -3,6 +3,10 @@
 	width: 23%;
 	
 }
+.divLastInlist{
+	display: inline-block;
+	width: 10%;
+}
 
 ul {
 	list-style-type: none;
@@ -35,8 +39,19 @@ ul {
 	background-color:#D8D8D8;
 	padding:5px;
 }	
+.edit{
+	background-image:url(https://cwo.ucsd.edu/_images/uxt/icon_pencil_disabled.gif);
+	height:21px;
+	width:21px;
+	border:none;
+	background-repeat:no-repeat;
+	float:right;
+}
+.editInput{
+	width:82%;
+}
 input {
-	display:inline-block;
+	display:block;
 	margin-right:20px;
 	border:none;
 	background-color:#4285f4;
@@ -51,7 +66,7 @@ input {
 }
 #enteringDiv{
 	margin-top:10px;
-	margin-left:11%;
+	margin-left:42%;
 }
 
 #button {
