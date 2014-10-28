@@ -46,6 +46,10 @@ var y = 2;
 		enteringDiv.appendChild(addTheBookButton);
 		enteringDiv.appendChild(addTheBookButton2);
 		
+		document.getElementById('bookName').focus();
+		
+		
+		
 		var topDiv = document.getElementById("firstDiv");
 		topDiv.appendChild(enteringDiv);}else{
 			reset();
@@ -97,6 +101,8 @@ var y = 2;
 		enteringDiv.appendChild(addTheBookButton);
 		enteringDiv.appendChild(addTheBookButton2);
 		
+		document.getElementById('bookName').focus();
+		
 		var topDiv = document.getElementById("firstDiv");
 		topDiv.appendChild(enteringDiv);}else{
 			reset();
@@ -119,6 +125,8 @@ document.getElementById("episode").remove();
 document.getElementById("score").remove();
 document.getElementById("button").remove();
 document.getElementById("button2").remove();
+
+
 }
 
 function addBook(k){
@@ -149,6 +157,13 @@ function addBook(k){
 		alert("please enter all fields");
 	}	
 }
+function lalalala(e){
+				if(e.keyCode == 13){
+			var inputNewValue = e.target.value;
+				var parentOfInput = e.target.parentElement;
+				parentOfInput.innerHTML = inputNewValue;
+				}
+	}
 function addToList(book) {
 
 		
@@ -169,19 +184,45 @@ function addToList(book) {
 		
 		var scoreDiv = document.createElement("div");
 		scoreDiv.innerHTML = book.score;
-		scoreDiv.className = "divInlist";
+		scoreDiv.className = "divLastInlist";
 		
 		var garbege = document.createElement("button");
 		garbege.className = "garbage";
-		garbege.onclick = function whenClickOnGarbege(){
-								newElement.remove();		
+		garbege.onclick = function whenClickOnGarbege(x){
+								x.target.parentElement.remove();
 							};
+		var edit = document.createElement("button");
+		edit.className = "edit";
+		edit.onclick = function whenClickOnEdit(x){
+								var parent = x.target.parentElement;
+								var divsInLI = parent.children;
+								var firstDivInLI = divsInLI[0];
+								var content = firstDivInLI.innerHTML;
+								var x = content.length;
+								
+								//var divChild = firstDivInLI.child.tagName;
+								
+								//if(x == firstDivInLI.innerHTML){
+									var editInput = document.createElement("input");
+									editInput.setAttribute("type","text");
+									editInput.setAttribute("id","editInput1");
+									editInput.setAttribute("value", content);
+									editInput.className = "editInput";
+									editInput.setAttribute("onkeydown", "lalalala(event)");
+									firstDivInLI.innerHTML = "";
+									firstDivInLI.appendChild(editInput);
+									document.getElementById('editInput1').focus();
+								//}
+								//alert(divChild);
+							};
+							
 		
 		newElement.appendChild(bookNameDiv);
 		newElement.appendChild(authorNameDiv);
 		newElement.appendChild(episodeDiv);
 		newElement.appendChild(scoreDiv);
 		newElement.appendChild(garbege);
+		newElement.appendChild(edit);
 		
 		if (book.k == 1){
 			var deleteMe = document.getElementById('warningEmptyWatchList');
@@ -205,3 +246,10 @@ function addToList(book) {
 		ul.appendChild(newElement);
 		
 }
+
+
+
+
+
+
+
