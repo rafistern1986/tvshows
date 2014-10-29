@@ -46,6 +46,17 @@ ul {
 	border:none;
 	background-repeat:no-repeat;
 	float:right;
+	background-color:#D8D8D8;
+}
+.privetEdit{
+	background-image:url(https://cwo.ucsd.edu/_images/uxt/icon_pencil_disabled.gif);
+	height:21px;
+	width:21px;
+	border:none;
+	background-repeat:no-repeat;
+	width:22%;
+	padding:none;
+	background-color:#D8D8D8;
 }
 .editInput{
 	width:82%;
