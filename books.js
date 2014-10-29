@@ -199,29 +199,134 @@ function addToList(book) {
     var edit = document.createElement("button");
     edit.className = "edit";
     edit.onclick = function whenClickOnEdit(x) {
-        var parent = x.target.parentElement;
-        var divsInLI = parent.children;
-        var firstDivInLI = divsInLI[0];
-        var content = firstDivInLI.innerHTML;
-        var x = content.length;
-        var editInput = document.createElement("input");
-        editInput.setAttribute("type", "text");
-        editInput.setAttribute("id", "editInput1");
-        editInput.setAttribute("value", content);
-        editInput.className = "editInput";
-        firstDivInLI.innerHTML = "";
-        firstDivInLI.appendChild(editInput);
-        document.getElementById('editInput1').focus();
-		editInput.onkeyup = function () {
-        if (event.keyCode == 27) {
-                var parentOfInput = event.target.parentElement;
-                parentOfInput.innerHTML = content;
-            } else if (event.keyCode == 13) {
-                var inputNewValue = event.target.value;
-                var parentOfInput = event.target.parentElement;
-                parentOfInput.innerHTML = inputNewValue;
-            }
-        };
+		edit.style.display = "none";
+        var parent = x.target.parentElement;  //li
+		
+		var edit1 = document.createElement("button");
+		edit1.className = "privetEdit";
+		var edit2 = document.createElement("button");
+		edit2.className = "privetEdit";
+		var edit3 = document.createElement("button");
+		edit3.className = "privetEdit";
+		var edit4 = document.createElement("button");
+		edit4.className = "privetEdit";
+
+		parent.appendChild(edit1);
+		parent.appendChild(edit2);
+		parent.appendChild(edit3);
+		parent.appendChild(edit4);
+
+		edit1.onclick = function whenClickOnEdit(x) {
+			edit.style.display = "none";
+		    var divsInLI = parent.children; 
+			var firstDivInLI = divsInLI[0]; //first div
+			var content = firstDivInLI.innerHTML;
+			var x = content.length;
+			
+			var editInput = document.createElement("input");
+			editInput.setAttribute("type", "text");
+			editInput.setAttribute("id", "editInput1");
+			editInput.setAttribute("value", content);
+			editInput.className = "editInput";
+			firstDivInLI.innerHTML = "";
+			firstDivInLI.appendChild(editInput);
+			document.getElementById('editInput1').focus();
+			editInput.onkeyup = function () {
+			if (event.keyCode == 27) {
+					var parentOfInput = event.target.parentElement;
+					parentOfInput.innerHTML = content;
+					parentOfInput.parentElement.children[5].style.display = "inline";
+				
+				} else if (event.keyCode == 13) {
+					var inputNewValue = event.target.value;
+					var parentOfInput = event.target.parentElement;
+					parentOfInput.innerHTML = inputNewValue;
+					parentOfInput.parentElement.children[5].style.display = "inline";
+					
+				}
+				
+			}};
+        edit2.onclick = function whenClickOnEdit(x) {
+			edit.style.display = "none";
+		    var divsInLI = parent.children; 
+			var firstDivInLI = divsInLI[1]; //first div
+			var content = firstDivInLI.innerHTML;
+			var x = content.length;
+			
+			var editInput = document.createElement("input");
+			editInput.setAttribute("type", "text");
+			editInput.setAttribute("id", "editInput1");
+			editInput.setAttribute("value", content);
+			editInput.className = "editInput";
+			firstDivInLI.innerHTML = "";
+			firstDivInLI.appendChild(editInput);
+			document.getElementById('editInput1').focus();
+			editInput.onkeyup = function () {
+			if (event.keyCode == 27) {
+					var parentOfInput = event.target.parentElement;
+					parentOfInput.innerHTML = content;
+					parentOfInput.parentElement.children[5].style.display = "inline";
+				} else if (event.keyCode == 13) {
+					var inputNewValue = event.target.value;
+					var parentOfInput = event.target.parentElement;
+					parentOfInput.innerHTML = inputNewValue;
+					parentOfInput.parentElement.children[5].style.display = "inline";
+				}
+			}};
+        edit3.onclick = function whenClickOnEdit(x) {
+			edit.style.display = "none";
+		    var divsInLI = parent.children; 
+			var firstDivInLI = divsInLI[2]; //first div
+			var content = firstDivInLI.innerHTML;
+			var x = content.length;
+			
+			var editInput = document.createElement("input");
+			editInput.setAttribute("type", "text");
+			editInput.setAttribute("id", "editInput1");
+			editInput.setAttribute("value", content);
+			editInput.className = "editInput";
+			firstDivInLI.innerHTML = "";
+			firstDivInLI.appendChild(editInput);
+			document.getElementById('editInput1').focus();
+			editInput.onkeyup = function () {
+			if (event.keyCode == 27) {
+					var parentOfInput = event.target.parentElement;
+					parentOfInput.innerHTML = content;
+					parentOfInput.parentElement.children[5].style.display = "inline";
+				} else if (event.keyCode == 13) {
+					var inputNewValue = event.target.value;
+					var parentOfInput = event.target.parentElement;
+					parentOfInput.innerHTML = inputNewValue;
+					parentOfInput.parentElement.children[5].style.display = "inline";
+				}
+			}};
+        edit4.onclick = function whenClickOnEdit(x) {
+			edit.style.display = "none";
+		    var divsInLI = parent.children; 
+			var firstDivInLI = divsInLI[3]; //first div
+			var content = firstDivInLI.innerHTML;
+			var x = content.length;
+			
+			var editInput = document.createElement("input");
+			editInput.setAttribute("type", "text");
+			editInput.setAttribute("id", "editInput1");
+			editInput.setAttribute("value", content);
+			editInput.className = "editInput";
+			firstDivInLI.innerHTML = "";
+			firstDivInLI.appendChild(editInput);
+			document.getElementById('editInput1').focus();
+			editInput.onkeyup = function () {
+			if (event.keyCode == 27) {
+					var parentOfInput = event.target.parentElement;
+					parentOfInput.innerHTML = content;
+					parentOfInput.parentElement.children[5].style.display = "inline";
+				} else if (event.keyCode == 13) {
+					var inputNewValue = event.target.value;
+					var parentOfInput = event.target.parentElement;
+					parentOfInput.innerHTML = inputNewValue;
+					parentOfInput.parentElement.children[5].style.display = "inline";
+				}
+			}};
         
     };
 
