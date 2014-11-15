@@ -1,0 +1,224 @@
+.divInlist {
+    display: inline-block;
+    width: 23%;
+}
+.divLastInlist {
+    display: inline-block;
+    width: 10%;
+}
+ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 0px;
+    margin-top: 4px;
+}
+#bookList {
+    margin-top: 5px;
+}
+#bookList2 {
+    margin-top: 5px;
+}
+li:nth-child(odd) {
+    background-color: #D2D9E5;
+}
+li:nth-child(even) {
+    background-color: #eee;
+}
+.liInList {
+    /*
+border-bottom:1px solid #4285f4;*/
+    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.garbage {
+    background-image: url(https://ssl.gstatic.com/mail/sprites/general_black-16bf964ab5b51c4b7462e4429bfa7fe8.png);
+    background-position-x: 0px;
+    background-position-y: -411px;
+    height: 21px;
+    width: 21px;
+    float: right;
+    border: none;
+    background-color: inherit;
+    padding: 5px;
+}
+.edit {
+    background-image: url(https://cwo.ucsd.edu/_images/uxt/icon_pencil_disabled.gif);
+    height: 21px;
+    width: 21px;
+    border: none;
+    background-repeat: no-repeat;
+    float: right;
+    background-color: inherit;
+}
+.privetEdit {
+    background-image: url(https://cwo.ucsd.edu/_images/uxt/icon_pencil_disabled.gif);
+    height: 21px;
+    width: 21px;
+    border: none;
+    background-repeat: no-repeat;
+    width: 22%;
+    padding: none;
+    background-color: inherit;
+}
+.editInput {
+    width: 82%;
+}
+input {
+    display: block;
+    margin-right: 20px;
+    border: 1px solid #4285f4;
+    background-color: white;
+    margin-bottom: 2px;
+    color: #4285f4;
+    text-align: center;
+    /*border-top-left-radius:25px;
+ border-top-right-radius:25px;
+ border-bottom-left-radius:25px;
+ border-bottom-right-radius:25px;*/
+}
+#enteringDiv {
+    margin-top: 10px;
+    margin-left: 43%;
+}
+#button {
+    text-align: center;
+    display: inline-block;
+    margin-right: 20px;
+    background-color: #D8D8D8;
+    color: #4285f4;
+    border: #4285f4 solid 1px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    cursor: pointer;
+    margin-left: 17.4%;
+}
+.searchClass::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #4285f4;
+}
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #4285f4;
+}
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #909;
+    opacity: 1;
+}
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #909;
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #909;
+}
+.header {
+    width: 100%;
+    height: 64px;
+    background-color: #4285f4;
+    margin: 0px;
+    margin-top: 0px;
+    color: white;
+    z-index: 300;
+    padding-top: 10px;
+}
+.margin10 {
+    font-size: 43px;
+    margin: 5%;
+    margin-left: 17%;
+}
+.addTvShow {
+    cursor: pointer;
+    background-color: #4285f4;
+    font-size: 40px;
+    width: 53px;
+    height: 53px;
+    color: white;
+    border: none;
+    text-align: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    float: right;
+    bottom: 24px;
+    position: fixed;
+    margin-left: 15px;
+    /* margin-right: 18%;*/
+}
+body {
+    background-color: #eee;
+    margin: 0px;
+}
+.firstDivClass {
+    z-index: 30;
+    position: relative;
+}
+.listArea {
+    height: 100%;
+    width: 66%;
+    margin-left: 17%;
+    background-color: #D8D8D8;
+    overflow: auto;
+    display: inline-block;
+}
+.all2InThis1 {
+    width: 100%;
+    height: 550px;
+    margin-top: 10px;
+    position: relative;
+    z-index: 3;
+}
+.hOne {
+    color: #4285f4;
+    text-align: center;
+    font-weight: 800;
+    /* text-decoration:underline;*/
+}
+.warningEmptyList {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 18%;
+}
+.plusButtonInTheMiddle {
+    cursor: pointer;
+    color: blue;
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.span23 {
+    width: 22.1%;
+    display: inline-block;
+    color: #4285f4;
+    font-size: 22px;
+    font-weight: 500;
+}
+p {
+    text-align: center;
+}
+.searchClass {
+    display: inline-block;
+    background-color: white;
+    color: blue;
+    margin: 1px;
+}
+.noResults {
+    color: #f00;
+    margin-left: 31%;
+    margin-top: 5%;
+    font-size: 40px;
+    display: none;
+}
+#searchWords {
+    margin-left: 19.5%;
+}
