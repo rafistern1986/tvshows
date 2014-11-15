@@ -85,7 +85,7 @@ function whenPlusIsPress(x, y) {
         //document.querySelector(".all2InThis1").style.marginTop = "-96px"; //this will make the inputs be ontop of the lists
         //var topDiv = document.getElementById("firstDiv");
         //appendChildToParent(topDiv, enteringDiv);
-        enterMovieName.foucs(); //select on top input
+        enterMovieName.focus(); //select on top input
 
     } else {
         reset();
