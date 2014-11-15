@@ -1,112 +1,49 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-		<title>my TV shows</title>
-		<link type="text/css" rel="stylesheet" href="books.css">
-		<style>
-		.header{
-			padding:10px;
-			font-size:43px;
-			width:100%;
-			height:53px;
-			background-color:#4285f4;
-			margin:0px;
-			margin-top:0px;
-			
-			color:white;
-			
-		}
-		.addTvShow{
-			cursor:pointer;
-			background-color:white;
-			font-size:40px;
-			width:53px;
-			height:53px;
-			color:#4285f4;
-			border:none;
-			text-align:center;
-			border-top-left-radius:25px;
-			border-top-right-radius:25px;
-			border-bottom-left-radius:25px;
-			border-bottom-right-radius:25px;
-			float:right;
-			margin-right:14%;
-		}
-		body{
-			background-color:#eee;
-			margin:0px;
-		}
-		
-		.firstDivClass{
-	
-		}
-		.listArea{
-			height:100%;
-			width:48%;
-			background-color:#D8D8D8;
-			overflow:auto;
-			display:inline-block;
-		}
-		.all2InThis1{
-			width:80%;
-			height:550px;
-			margin-left:10%;
-			margin-top:10px;
-		}
-		.hOne{
-			color:#4285f4;
-			text-align:center;
-			text-decoration: underline;
-		}
-		.warningEmptyList{
-			text-align:center;
-			font-size:25px;
-			margin-top:30%;
-		}
-		.plusButtonInTheMiddle{
-			cursor:pointer;
-			color:blue;
-			border:none;
-			background-color:white;
-			font-size:20px;
-			border-top-left-radius:25px;
-			border-top-right-radius:25px;
-			border-bottom-left-radius:25px;
-			border-bottom-right-radius:25px;
-		}
-		.margin10{
-			margin:9.3%;
-		}	
-		.span23{
-			width:22.1%;
-			display:inline-block;
-			
-			color:#4285f4;
-			
-		}
-		</style>
-		
-		</head>
-		<body >
-			<div class="header header2"><span class="margin10">My best TV shows</span><button class="addTvShow" id="addTvShow"> + </button></div>
-			<div class="firstDivClass" id="firstDiv"><div id="enteringDiv"></div></div>
-			
-			<div class="all2InThis1 header2">
-				<div class="listArea">
-					<h1 class="hOne">to watch list</h1>
-					<div id="category" style="border-bottom:#4285f4 solid 1px;display:none;"><div class="span23" style="margin-left:20px;">name</div><div class="span23">season</div><div class="span23">episode</div><div class="span23">score</div></div>
-					<div id="warningEmptyWatchList" class="warningEmptyList">Your watch list is empty</br>press the <button onclick="plusButtonInMiddelOfThePage()" class="plusButtonInTheMiddle">+</button> to add a show</div>
-					
-					<ul id="bookList"></ul>
-				</div>
-				<div class="listArea">
-					<h1 class="hOne">my favorites</h1>
-					<div id="category2" style="border-bottom:#4285f4 solid 1px;display:none;"><div class="span23" style="margin-left:20px;">name</div><div class="span23">season</div><div class="span23">episode</div><div class="span23">score</div></div>
-					<div id="warningEmptyFavoritesList" class="warningEmptyList">Your favorites list is empty</br>press the <button onclick="plusButtonInMiddelOfThePage()" class="plusButtonInTheMiddle">+</button> to add a show</div>
-					<ul id="bookList2"></ul>
-				</div>
-			</div>	
-			
-			<script src="books.js"></script>
-		</body>
-	</html>
+<html>
+
+<head>
+    <title>my TV shows</title>
+
+    <link type="text/css" rel="stylesheet" href="tv-shows.css">
+    <style></style>
+
+</head>
+
+<body>
+
+    <div class="header header2">
+        <span class="margin10">My best TV shows</span>
+        <input id="searchWords" class="searchClass" type="text" onkeyup="searchForTvShowAsYouType()" placeholder="search TV show"></input>
+        <input class="searchClass" type="button" onclick="searchForTvShow()" value="search"></input>
+    </div>
+
+    <div class="firstDivClass" id="firstDiv">
+        <div id="enteringDiv"></div>
+    </div>
+    <div class="all2InThis1 header2">
+        <div class="listArea">
+            <h1 class="hOne">Watch list</h1>
+
+            <div id="category" style="display:none;">
+                <div class="span23" style="margin-left:20px;">Name</div>
+                <div class="span23">Season</div>
+                <div class="span23">Episode</div>
+                <div class="span23">Score</div>
+            </div>
+            <div class="noResults" id="noResults">No results matching</div>
+            <div id="warningEmptyWatchList" class="warningEmptyList">Your watch list is empty</br>press the
+                <button id="addTvShow2" class="plusButtonInTheMiddle">+</button>&nbsp;to add a show</div>
+            <ul id="tvShowList"></ul>
+        </div>
+        <button class="addTvShow" id="addTvShow">+</button>
+    </div>
+    <footer>
+        <p>&copy; 2014 Refoel Sternbuch. All rights reserved.</p>
+    </footer>
+
+
+
+    <script src="tv-shows.js"></script>
+</body>
+
+</html>
